@@ -20,18 +20,18 @@ type Table = {
 
 function setTheTable(): Table {
   // 👉 FIXME ❌
-  let aTable: Table = {
-    seats: [
-      { drink: { type: "Tea", poured: true } },
-      { drink: { type: "Tea", poured: true } },
-      { drink: { type: "Tea", poured: true } },
-      { drink: { type: "Tea", poured: true } },
-    ],
-  };
 
-  ///////////////
-  //return { seats: [] };
-  return aTable;
+  const table: Table = { seats: [] };
+
+  for (let i = 0; i < 4; i++) {
+    table.seats.push({
+      drink: {
+        type: "Tea",
+        poured: true,
+      },
+    });
+  }
+  return table;
 }
 
 export function attendATeaParty() {
